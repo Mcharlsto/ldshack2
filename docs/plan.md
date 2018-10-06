@@ -2,7 +2,9 @@
 ## Locations
 * 5th floor
 * 4th floor
-* etc
+* 3rd floor
+* 2nd floor
+* 1st floor
 ## Objects in game:
 * Keys
 * 5 Chests
