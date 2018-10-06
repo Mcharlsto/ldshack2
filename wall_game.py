@@ -1,4 +1,4 @@
-print("wecome to the wall game, guess the ")
+print("Welcome to the Wall Game, guess the ")
 def wallscript():
     userinput = raw_input("Letter: ")
     if userinput == "c":
@@ -6,6 +6,6 @@ def wallscript():
     elif userinput == "C":
          print("well done you guessed the letter!!!")
     else:
-        print("you are wrong")
+        print("You are wrong!")
         wallscript()
 wallscript()
