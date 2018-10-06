@@ -1,4 +1,4 @@
-# Plan
+# Libary Escape Plan
 ## Locations
 * 5th floor
 * 4th floor
