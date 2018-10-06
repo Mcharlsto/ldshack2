@@ -25,6 +25,7 @@ https://riddles.fyi/ - Multiple choices
 * Time limit 90 secs
 * Puzzle in brick wall
 * Input letter - correct answer C
+* Wall game opens a tunnel that goes from 3 to 2
 
 ### [] 2:
 * 
