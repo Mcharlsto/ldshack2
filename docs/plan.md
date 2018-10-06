@@ -11,8 +11,11 @@
 2. Start hearing noises comming from loft. You decide to investigate.
 3. Laptop explodes. Certain amount of time to get out.
 ## Floors:
-## 4:
+### 5:
+
+### 4:
 * Laptop exploads
 * Fire escape on floor 4 but bookcase falls in front
-* Way to get down stairs
+* Way to get down is stairs
+## 3:
 * 
