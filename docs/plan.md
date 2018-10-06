@@ -25,4 +25,7 @@ https://riddles.fyi/ - Multiple choices
 * Input letter - correct answer C
 
 ### 2:
-* 
+*
+### 1:
+* End floor
+* Well done
