@@ -25,7 +25,7 @@ def listen(self, actor, noun, words):
         side4key = side4.new_object("key", "Key to the Elevator")
         floor3.make_requirement(side4key)
     else:
-        print "You Lose"
+        print "Try Again"
         listen(0,0,0,0)
 
 
