@@ -11,7 +11,7 @@
 2. Start hearing noises comming from loft. You decide to investigate.
 3. Laptop explodes. Certain amount of time to get out.
 ## Floors:
-### [X]5:
+### [X] 5:
 * Intro floor no choices
 ### [] 4:
 * Laptop exploads
