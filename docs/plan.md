@@ -16,10 +16,12 @@
 ### 4:
 * Laptop exploads
 * Secret code to elevator get the code by talking to lion and answering riddle.
-https://riddles.fyi/
+https://riddles.fyi/ - Multiple choices
 * Lift takes you down to floor 3
 ### 3:
 * All on fire
 * Time limit 90 secs
+* Puzzle in brick wall
+
 ### 2:
 * 
