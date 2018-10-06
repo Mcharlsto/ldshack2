@@ -12,7 +12,7 @@
 3. Laptop explodes. Certain amount of time to get out.
 ## Floors:
 ### 5:
-
+* Intro floor no choices
 ### 4:
 * Laptop exploads
 * Fire escape on floor 4 but bookcase falls in front
