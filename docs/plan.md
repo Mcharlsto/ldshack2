@@ -15,7 +15,7 @@
 ## Floors:
 ### [X] 5:
 * Intro floor no choices
-### [] 4:
+### [x] 4:
 * Laptop exploads
 * Secret code to elevator get the code by talking to lion and answering riddle.
 https://riddles.fyi/ - Multiple choices
