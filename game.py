@@ -35,4 +35,4 @@ user = game.new_player(floor5)
 side4key = side4.new_object("Key", "Key to the Elevator")
 
 game.run()
-59
+
