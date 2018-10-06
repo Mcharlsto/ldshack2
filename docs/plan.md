@@ -22,6 +22,7 @@ https://riddles.fyi/ - Multiple choices
 * All on fire
 * Time limit 90 secs
 * Puzzle in brick wall
+* Input letter - correct answer C
 
 ### 2:
 * 
