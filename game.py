@@ -4,32 +4,28 @@ import time
 
 game = Game()
 
-def ifWord(word, check):
-    ifWord = False
-    if word.lower() == check:
-        ifWord = True
-    else:
-        ifWord = False
-    return ifWord
+#Needs implementing
+def countdown(n):
+    while n > 0:
+        print(n)
+        time.sleep(1)
+        n = n -1
+        if n == 0:
+           print("Times up!")
+           os.execl(sys.executable, sys.executable, * sys.argv)
+
 
 def listen(self, actor, noun, words):
     print "What is the worst vegetable to have on a ship?"
     print "Enter answer"
     global input
     input = raw_input()
-    if ifWord(input, "leek"):
+    if "leek" or "leak" in input.lower():
         print "You Win. The frog drops a key. You can use \"take key\" to collect it."
         side4key = side4.new_object("key", "Key to the Elevator")
         floor3.make_requirement(side4key)
     else:
-        print "You Lose"
-        listen(0,0,0,0)
-    if ifWord(input, "a leek"):
-        print "You Win. The frog drops a key. You can use \"take key\" to collect it."
-        side4key = side4.new_object("key", "Key to the Elevator")
-        floor3.make_requirement(side4key)
-    else:
-        print "You Lose"
+        print "Try Again"
         listen(0,0,0,0)
 
 
