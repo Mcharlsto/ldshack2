@@ -29,7 +29,7 @@ Commands - listen, east
 """
 )
 
-stairs = game.new_conne4ection("Stairs", floor5, floor4, [IN, DOWN], [UP, OUT])
+stairs = game.new_conneection("Stairs", floor5, floor4, [IN, DOWN], [UP, OUT])
 fire_escape = game.new_connection("Escape", floor4, side4, [IN, WEST], [EAST, OUT])
 user = game.new_player(floor5)
 side4key = side4.new_object("Key", "Key to the Elevator")
