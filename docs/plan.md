@@ -15,7 +15,11 @@
 * Intro floor no choices
 ### 4:
 * Laptop exploads
-* Fire escape on floor 4 but bookcase falls in front
-* Way to get down is stairs
-## 3:
+* Secret code to elevator get the code by talking to lion and answering riddle.
+https://riddles.fyi/
+* Lift takes you down to floor 3
+### 3:
+* All on fire
+* Time limit 90 secs
+### 2:
 * 
