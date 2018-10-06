@@ -20,7 +20,7 @@ def listen(self, actor, noun, words):
     print "Enter answer"
     global input
     input = raw_input()
-    if "leek" in input.lower():
+    if "leek" or "leak" in input.lower():
         print "You Win. The frog drops a key. You can use \"take key\" to collect it."
         side4key = side4.new_object("key", "Key to the Elevator")
         floor3.make_requirement(side4key)
