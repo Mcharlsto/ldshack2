@@ -497,32 +497,32 @@ class Game(Base):
     self.print_output(text, message_type)
 
   def style_text(self, text, message_type):
-    if False: # trinket.io
-      return text
+    # if False: # trinket.io
+      # return text
 
-    if self.http_output:
-      if (message_type == FEEDBACK):
-        text = "<font color='red'>" + text + '</font>'
-      if (message_type == TITLE):
-        text = "<font color='blue'>" + text + '</font>'
-      if (message_type == DESCRIPTION):
-        pass
-      if (message_type == CONTENTS):
-        text = "<font color='green'>" + text + '</font>'
-      if (message_type == DEBUG):
-        text = "<font color='orange'>" + text + '</font>'
-      return text
+    # if self.http_output:
+      # if (message_type == FEEDBACK):
+        # text = "<font color='red'>" + text + '</font>'
+      # if (message_type == TITLE):
+        # text = "<font color='blue'>" + text + '</font>'
+      # if (message_type == DESCRIPTION):
+        # pass
+      # if (message_type == CONTENTS):
+        # text = "<font color='green'>" + text + '</font>'
+      # if (message_type == DEBUG):
+        # text = "<font color='orange'>" + text + '</font>'
+      # return text
 
-    if (message_type == FEEDBACK):
-      text = Colors.FG.pink + text + Colors.reset
-    if (message_type == TITLE):
-      text = Colors.FG.yellow + Colors.BG.blue + "\n" + text + Colors.reset
-    if (message_type == DESCRIPTION):
-      text = Colors.reset + text
-    if (message_type == CONTENTS):
-      text = Colors.FG.green + text + Colors.reset
-    if (message_type == DEBUG):
-      text = Colors.bold + Colors.FG.black + Colors.BG.orange + "\n" + text + Colors.reset
+    # if (message_type == FEEDBACK):
+      # text = Colors.FG.pink + text + Colors.reset
+    # if (message_type == TITLE):
+      # text = Colors.FG.yellow + Colors.BG.blue + "\n" + text + Colors.reset
+    # if (message_type == DESCRIPTION):
+      # text = Colors.reset + text
+    # if (message_type == CONTENTS):
+      # text = Colors.FG.green + text + Colors.reset
+    # if (message_type == DEBUG):
+      # text = Colors.bold + Colors.FG.black + Colors.BG.orange + "\n" + text + Colors.reset
     return text
 
   # overload this for HTTP output
