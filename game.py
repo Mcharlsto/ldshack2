@@ -51,7 +51,7 @@ Commands - west
 side4 = game.new_location(
 "Side Room",
 """
-You are in a side room, a lion is infront of you.
+You are in a small side room, a lion is standing in its center.
 Commands - listen, east
 """
 )
@@ -71,4 +71,3 @@ user.add_verb(Verb(listen, "listen"))
 
 
 game.run()
-
