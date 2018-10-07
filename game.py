@@ -4,9 +4,10 @@ import time
 import os
 import sys
 import __future__
+import threading
 game = Game()
 
-def start(self, actor, noun, words):
+def countdown():
     floor3Key = corridoor.new_object("key", "Key to Floor 3")
     floor3.make_requirement(floor3Key)
     print("A key to the main floor 3 is now available. Use \"take key\"")
@@ -15,8 +16,59 @@ def start(self, actor, noun, words):
         time.sleep(1)
         n = n -1
         if n == 0:
-           print("Times up!")
+           print("""You died!
+
+
+                                                 .#@#';'+@@;
+                                               @; ```` ```` :@`
+                                             @,```````````````,@
+                                            @ ````````````````  @
+                                          `@ ````````````````````@
+                                          @ ````````````````````` @
+                                         ::` ```````````````````` ;,
+                                         @`````````````````````````@
+                                        ,+```````````````````````:`#`
+                                        @``.`````````````````````;`.#
+                                        @  ;`````````````````````+` @
+                                        @``.`````````````````````;``@
+                                        @`:  ````````````````````. `@
+                                        @`@````` ````````````````,`.@
+                                        @ ,``` ` ` ````````````  @ '@
+                                        @``@.`` '+````  ` .:'+@ #'@`@
+                                        @ `@@` ,;;:+# ``@:`   ``.`+ @
+                                        @, ' ` `.'. `#`` ;,+##'``';,@
+                                        ##,``#@@@@@@,  `#@@@@@@@:`+##
+                                        .@@`'@@@@@@@@ ``@@@@@@@@@ #@,
+                                         @@.@@@@@ .@@```@@@@@ +@@ @@
+                                         @@:+@@@@'#@@  `@@@@@@@@# @@@
+                                        .@@.:@@@@@@@'`@` @@@@@@#+`:+@
+                                        ,@.,`'+@@@+:`:@@  ;+++'+ `  @
+                                        ,@;`` :''.#``@@@;``    ,:``,@
+                                        `@#  ``.`````@+@@ ``.;'` ` @
+                                         ,@ ,. ``.``:@#@@  ;``  , @
+                                          .@@;+'````+@#@@  ```@+@@`
+                                           @'@@@``` `'`..`````@`#@
+                                           @,'@@ ` `  ``  `.`+@ @@
+                                           @..@@#,`..,  `  .'@@`.@
+                                           @.`@@;'@#+#'';#,.:@@`:@
+                                           @`;;@#@ ,;;  .:`#@@@`;#
+                                           @`+`'+,#@#+,#+@@+.@+`++
+                                           @.:`@`#;  `;'#'.+, ` #'
+                                           ++#` `.`'#`,:#+,` ,``@.
+                                            @@ ````   `.,, ``   @
+                                            :@ ``  ```` ``` `` @;
+                                             '@ :  ``````` +` @+
+                                              +@ ``  ````` `.@;
+                                               @@ `````` #`.@:
+                                                @@`@` ``# ;@.
+                                                 ;@@@@@@@@@`
+                                                     ````
+           """)
            os.execl(sys.executable, sys.executable, * sys.argv)
+
+def start(self, actor, noun, words):
+        countdown_thread = threading.Thread(target=countdown)
+        countdown_thread.start()
 
 def listen(self, actor, noun, words):
     print "What is the worst vegetable to have on a ship?"
@@ -74,12 +126,91 @@ Commands - start then west
 )
 
 floor3 = game.new_location(
-"Floor 3",
+"TOP MIDDLE MAZE ROOM",
 """
-Description goes here.
+ `,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.
+ ,@@@@@@@@@@@@@,            ;            '
+ ,@@@@@@@@@@@@@,            ;            '
+ ,@@@@@@@@@@@@@,            ;            '
+ ,@@@@@@@@@@@@@,            ;            '
+ ,@@@@@@@@@@@@@,            ;            '
+ ,@@@@@@@@@@@@@,            ;            '
+ ,@@@@@@@@@@@@@,            ;            '
+ ,@@@@@@@@@@@@@,            ;            '
+ ,@@@@@@@@@@@@@,            ;            '
+ ,@@@@@@@@@@@@@,            ;            '
+ ,@@@@@@@@@@@@@,            ;            '
+ ,@@@@@@@@@@@@@,            ;            '
+ ,@@@@@@@@@@@@;:,,,,,,,,,,,.',,,,,,,,,,,.+
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,`````````````,````````````;````````````'
+ ,`````````````,````````````;````````````'
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,             ,            ;            '
+ ,@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
+
+ You are in the first room of a large maze.
 """
 )
 
+tlmaze = game.new_location(
+"TOP LEFT MAZE ROOM",
+"""
+"""
+)
+
+
+trmaze = game.new_location(
+"TOP RIGHT MAZE ROOM",
+"""
+"""
+)
+
+
+mlmaze = game.new_location(
+"MIDDLE LEFT MAZE ROOM",
+"""
+"""
+)
+
+mmmaze = game.new_location(
+"MIDDLE MIDDLE MAZE ROOM",
+"""
+"""
+)
+
+mrmaze = game.new_location(
+"MIDDLE RIGHT MAZE ROOM",
+"""
+"""
+)
+
+blmaze = game.new_location(
+"BOTTOM LEFT MAZE ROOM",
+"""
+"""
+)
 stairs = game.new_connection("Stairs", floor5, floor4, [IN, DOWN], [UP, OUT])
 fire_escape = game.new_connection("Side Room", floor4, side4, [IN, WEST], [EAST, OUT])
 floor3stairs = game.new_connection("Stairs", floor4, corridoor, [IN, DOWN], [UP, OUT])
