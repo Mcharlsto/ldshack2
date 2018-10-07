@@ -4,16 +4,17 @@ import time
 
 game = Game()
 
-#Needs implementing
-def countdown(n):
+def start(self, actor, noun, words):
+    floor3Key = corridoor.new_object("key", "Key to Floor 3")
+    floor3.make_requirement(floor3Key)
+    print("A key to the main floor 3 is now available. Use \"take key\"")
+    n = 5
     while n > 0:
-        print(n)
         time.sleep(1)
         n = n -1
         if n == 0:
            print("Times up!")
-           os.execl(sys.executable, sys.executable, * sys.argv)
-
+           game.run()
 
 def listen(self, actor, noun, words):
     print "What is the worst vegetable to have on a ship?"
@@ -23,7 +24,7 @@ def listen(self, actor, noun, words):
     if "leek" or "leak" in input.lower():
         print "You Win. The frog drops a key. You can use \"take key\" to collect it."
         side4key = side4.new_object("key", "Key to the Elevator")
-        floor3.make_requirement(side4key)
+        corridoor.make_requirement(side4key)
     else:
         print "Try Again"
         listen(0,0,0,0)
@@ -51,24 +52,32 @@ Commands - west
 side4 = game.new_location(
 "Side Room",
 """
-You are in a side room, a lion is infront of you.
+You are in a small side room, a lion is standing in its center.
 Commands - listen, east
+"""
+)
+
+corridoor = game.new_location(
+"Corridoor",
+"""
+You have reached a corridoor at the bottom of the stairs. The room ahead is very hot and you can't survive in there for very long. Type start then get the key then advance to the next room.
+Commands - start then west
 """
 )
 
 floor3 = game.new_location(
 "Floor 3",
 """
-Welcome to floor 3. You only have 100 seconds before you will die due to the extreme heat."
+Description goes here.
 """
 )
 
 stairs = game.new_connection("Stairs", floor5, floor4, [IN, DOWN], [UP, OUT])
 fire_escape = game.new_connection("Side Room", floor4, side4, [IN, WEST], [EAST, OUT])
-floor3stairs = game.new_connection("Stairs", floor4, floor3, [IN, DOWN], [UP, OUT])
+floor3stairs = game.new_connection("Stairs", floor4, corridoor, [IN, DOWN], [UP, OUT])
+secret = game.new_connection("Secret", floor5, side4, [IN, WEST], [EAST, OUT])
+corridorrFloor3 = game.new_connection("Continue to Floor 3", corridoor, floor3, [IN, WEST], [EAST, OUT])
 user = game.new_player(floor5)
 user.add_verb(Verb(listen, "listen"))
-
-
+user.add_verb(Verb(start, "start"))
 game.run()
-

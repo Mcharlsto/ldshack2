@@ -28,6 +28,7 @@ https://riddles.fyi/ - Multiple choices
 * Wall game opens a tunnel that goes from 3 to 2
 
 ### [] 2:
+* Maze Thingie
 * 
 ### [] 1:
 * End floor
