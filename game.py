@@ -597,7 +597,7 @@ bmmaze = game.new_location(
 floor1 = game.new_location(
 "Floor 1",
 """
-End goes here, type end
+Type END\
 """)
 
 stairs = game.new_connection("Stairs", floor5, floor4, [IN, DOWN], [UP, OUT])
