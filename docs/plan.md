@@ -27,10 +27,11 @@ https://riddles.fyi/ - Multiple choices
 * Input letter - correct answer C
 * Wall game opens a tunnel that goes from 3 to 2
 
-### [] 2:
+### [X] 2:
 * Maze Thingie
 * 
 ### [] 1:
 * End floor
 * Well done
 * END
+* YEAH!!
