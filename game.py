@@ -1,20 +1,22 @@
 # Hello, this is the main file
 from advent import *
 import time
-
+import os
+import sys
+import __future__
 game = Game()
 
 def start(self, actor, noun, words):
     floor3Key = corridoor.new_object("key", "Key to Floor 3")
     floor3.make_requirement(floor3Key)
     print("A key to the main floor 3 is now available. Use \"take key\"")
-    n = 5
+    n = 100
     while n > 0:
         time.sleep(1)
         n = n -1
         if n == 0:
            print("Times up!")
-           game.run()
+           os.execl(sys.executable, sys.executable, * sys.argv)
 
 def listen(self, actor, noun, words):
     print "What is the worst vegetable to have on a ship?"
@@ -33,6 +35,12 @@ def listen(self, actor, noun, words):
 floor5 = game.new_location(
 "Floor 5",
 """
+    __    _ __                             ______
+   / /   (_) /_  _________ ________  __   / ____/_____________ _____  ___
+  / /   / / __ \/ ___/ __ `/ ___/ / / /  / __/ / ___/ ___/ __ `/ __ \/ _ \
+ / /___/ / /_/ / /  / /_/ / /  / /_/ /  / /___(__  ) /__/ /_/ / /_/ /  __/
+/_____/_/_.___/_/   \__,_/_/   \__, /  /_____/____/\___/\__,_/ .___/\___(_)
+                              /____/                        /_/
 You are on floor five of a large library.
 The place is deserted.
 You cannot see the room.
