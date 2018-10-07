@@ -19,3 +19,4 @@ print("""|@@@@|     |####|
 print("Thank you for playing!")
 time.sleep(5)
 webbrowser.open("https://jam772.github.io/")
+print("By James, Owen and Matthew")
