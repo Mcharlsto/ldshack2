@@ -40,7 +40,7 @@ def countdown():
     floor3Key = corridoor.new_object("key", "Key to Floor 3")
     floor3.make_requirement(floor3Key)
     print("A key to the main floor 3 is now available. Use \"take key\"")
-    n = 10
+    n = 30
     while n > 0:
         time.sleep(1)
         n = n -1
@@ -100,7 +100,7 @@ def start(self, actor, noun, words):
         countdown_thread.start()
 
 def listen(self, actor, noun, words):
-    print "What is the worst vegetable to have on a ship?"
+    print " The lion asks: What is the worst vegetable to have on a ship?"
     print "Enter answer"
     global input
     input = raw_input()
