@@ -40,7 +40,7 @@ def countdown():
     floor3Key = corridoor.new_object("key", "Key to Floor 3")
     floor3.make_requirement(floor3Key)
     print("A key to the main floor 3 is now available. Use \"take key\"")
-    n = 100
+    n = 10
     while n > 0:
         time.sleep(1)
         n = n -1
