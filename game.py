@@ -6,7 +6,35 @@ import sys
 import __future__
 import threading
 from playsound import playsound
+
 game = Game()
+def end(self, actor, noun, words):
+    print "\n\n\nWell done! \nYou completed the Libary Escape Game!\n\n\n"
+    time.sleep(2)
+    print """|@@@@|     |####|
+|@@@@|     |####|
+|@@@@|     |####|
+\@@@@|     |####/
+ \@@@|     |###/
+  `@@|_____|##'
+       (O)
+    .-'''''-.
+  .'  * * *  `.
+ :  *       *  :
+: ~   Libary ~  :
+: ~   Escape ~  :
+ :  *       *  :
+  `.  * * *  .'
+    `-.....-'\n\n\n"""
+    animation = "Thanks For Playing"
+
+    for i in range(18):
+        time.sleep(0.1)
+        sys.stdout.write("\r" + animation[i % len(animation)])
+        sys.stdout.flush()
+        time.sleep(5)
+        print "By James, Owen and Matthew"
+
 
 def countdown():
     floor3Key = corridoor.new_object("key", "Key to Floor 3")
@@ -422,7 +450,7 @@ mrmaze = game.new_location(
 
 """
 )
-bRmaze = game.new_location(
+brmaze = game.new_location(
 "BOTTOM RIGHT MAZE ROOM",
 """
 
@@ -519,7 +547,7 @@ blmaze = game.new_location(
 )
 
 bmmaze = game.new_location(
-"BOTTOM MIDDLE MAZE ROOM"
+"BOTTOM MIDDLE MAZE ROOM",
 """
 
  `,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.
@@ -567,9 +595,9 @@ bmmaze = game.new_location(
 """
 )
 floor1 = game.new_location(
-"Floor 1"
+"Floor 1",
 """
-End goes here
+End goes here, type end
 """)
 
 stairs = game.new_connection("Stairs", floor5, floor4, [IN, DOWN], [UP, OUT])
@@ -584,7 +612,7 @@ maze5 = game.new_connection("Maze 5", mrmaze, trmaze, [IN, NORTH], [SOUTH, OUT])
 maze6 = game.new_connection("Maze 6", mlmaze, mmmaze, [IN, EAST],  [WEST, OUT])
 maze7 = game.new_connection("Maze 7", mrmaze, mmmaze, [IN, WEST], [EAST, OUT])
 maze8 = game.new_connection("Maze 8", blmaze, mlmaze, [IN, NORTH], [SOUTH, OUT])
-maze9 = game.new_connection("Maze 9", bmmaze, mmaze, [IN, NORTH], [SOUTH, OUT])
+maze9 = game.new_connection("Maze 9", bmmaze, mmmaze, [IN, NORTH], [SOUTH, OUT])
 maze10 = game.new_connection("Maze 10", brmaze, mlmaze, [IN, NORTH], [SOUTH, OUT])
 maze11 = game.new_connection("Maze 11", blmaze, bmmaze, [IN, EAST], [WEST, OUT])
 maze12 = game.new_connection("Maze 12", brmaze, bmmaze, [IN, WEST], [EAST, OUT])
@@ -594,4 +622,5 @@ maze14 = game.new_connection("Maze 14", brmaze, floor1, [IN, SOUTH], [NORTH, OUT
 user = game.new_player(floor5)
 user.add_verb(Verb(listen, "listen"))
 user.add_verb(Verb(start, "start"))
+user.add_verb(Verb(end, "end"))
 game.run()
