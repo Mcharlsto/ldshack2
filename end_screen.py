@@ -1,6 +1,6 @@
 import webbrowser
 import time
-print("Well done! \nYou completed the Libary Escape Game!\n\n\n")
+print("\n\n\n\n\n\n\n\n\n\n\n\nWell done! \nYou completed the Libary Escape Game!\n\n\n")
 print("""|@@@@|     |####|
 |@@@@|     |####|
 |@@@@|     |####|
