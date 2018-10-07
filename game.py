@@ -5,7 +5,6 @@ import os
 import sys
 import __future__
 import threading
-from playsound import playsound
 
 game = Game()
 def end(self, actor, noun, words):
@@ -26,14 +25,7 @@ def end(self, actor, noun, words):
  :  *       *  :
   `.  * * *  .'
     `-.....-'\n\n\n"""
-    animation = "Thanks For Playing"
-
-    for i in range(18):
-        time.sleep(0.1)
-        sys.stdout.write("\r" + animation[i % len(animation)])
-        sys.stdout.flush()
-        time.sleep(5)
-        print "By James, Owen and Matthew"
+    print "By James, Owen and Matthew"
 
 
 def countdown():
@@ -104,7 +96,11 @@ def listen(self, actor, noun, words):
     print "Enter answer"
     global input
     input = raw_input()
-    if "leek" or "leak" in input.lower():
+    if "leek" in input.lower():
+        print "You Win. The frog drops a key. You can use \"take key\" to collect it."
+        side4key = side4.new_object("key", "Key to the Elevator")
+        corridoor.make_requirement(side4key)
+    elif "leak" in input.lower():
         print "You Win. The frog drops a key. You can use \"take key\" to collect it."
         side4key = side4.new_object("key", "Key to the Elevator")
         corridoor.make_requirement(side4key)
