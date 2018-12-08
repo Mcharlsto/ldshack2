@@ -2,8 +2,8 @@
 from advent import *
 import time
 import os
-import sys
 import __future__
+import sys
 import threading
 
 game = Game()
